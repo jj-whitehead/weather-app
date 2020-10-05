@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Demo
 
-![Demo_Image](https://raw.githubusercontent.com/jj-whitehead/simple-weather-app/master/SimpleWeatherApp/demo_weather_app.png)
+![Demo_Image](https://raw.githubusercontent.com/jj-whitehead/weather_app/master/weatherapp.png)
 
 
 ## Authors
