@@ -1,0 +1,54 @@
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" class="form-control" [(ngModel)]="searchLocationName"
+               placeholder="Search the weather in any location:">
+        <div class="input-group-append">
+          <button class="btn btn-secondary" (click)="searchClick()" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="row container d-flex justify-content-center">
+        <div class="col-lg-8 grid-margin stretch-card">
+          <div class="d-flex justify-content-center" style="padding: 3rem;" *ngIf="weatherForecastsLoading">
+            <div class="spinner-grow text-primary " style="width: 3rem; height: 3rem; padding: 3rem;" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <div class="card card-weather weather-card" *ngIf="firstWeatherForecastToDisplay">
+            <div class="card-body"
+                 [ngStyle]="{'background-size': 'cover', 'background': 'url(' + firstWeatherForecastToDisplay.imgUrl + ') no-repeat center'}">
+              <div class="float-right">
+                <h3>{{firstWeatherForecastToDisplay.locationName}}</h3>
+              </div>
+              <div>
+                <h3>{{firstWeatherForecastToDisplay.applicableDate | date : 'MMMM d, y'}}</h3>
+                <p class="text-gray"><span>{{firstWeatherForecastToDisplay.applicableDate | date : 'EEEE'}}</span>
+                  <!--                <span class="weather-location">{{firstWeatherForecastToDisplay.theTemp}}</span> </p>-->
+              </div>
+              <div class="weather-data d-flex">
+                <div class="mr-auto">
+                  <h4 class="display-3">{{firstWeatherForecastToDisplay.theTemp | number : '.1-2'}} <span
+                    class="symbol">°</span>C</h4>
+                  <p> {{firstWeatherForecastToDisplay.weatherStateName}} </p>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="d-flex weekly-weather align-content-center">
+                <div class="weekly-weather-item padding" *ngFor="let weatherForecast of weatherForecasts"
+                     [ngStyle]="{'background-size': 'cover','background': 'url(' + weatherForecast.imgUrl + ') no-repeat center'}">
+                  <h4 class="mb-0">{{weatherForecast.applicableDate | date :'EEE'}}</h4>
+                  <p class="mb-0"><strong> {{weatherForecast.theTemp | number : '.1-2'}}<span
+                    class="symbol">°</span>C</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900");
+@import url("https://cdn.linearicons.com/free/1.0.0/icon-font.min.css");
+
+.stretch-card>.card {
+  width: 100%;
+  min-width: 100%
+}
+
+body {
+  background-color: #f9f9fa
+}
+
+.flex {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto
+}
+.padding {
+  padding: 5rem
+}
+.grid-margin {
+  margin-bottom: 25px
+}
+.card {
+  border: 0;
+  border-radius: 2px
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem
+}
+
+.h3,
+h3 {
+  font-size: 1.56rem
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #112233;
+}
+.weather-card {
+  margin: 60px auto;
+  background: #fff;
+  box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+
+p {
+  font-size: 13px
+}
+
+.text-gray,
+.card-subtitle
+ {
+  color: #969696
+}
+
+.card-weather .weather-data {
+  padding: 0 0 4.75rem
+}
+
+.mr-auto,
+.mx-auto {
+  margin-right: auto !important
+}
+
+.display-3 {
+  font-size: 2.5rem
+}
+
+.card-weather .card-body {
+  background: #ffffff
+}
+
+.card-weather .weekly-weather {
+  background: #ffffff;
+  height: 250px;
+  overflow-x: auto
+}
+
+.card-weather .weekly-weather .weekly-weather-item {
+  background-size: 80px 80px !important;
+  flex: 0 0 20%;
+  width: 50px;
+  border-right: 2px solid #f2f2f2;
+  padding: 1rem;
+  text-align: center;
+}
+.weekly-weather-item:hover {
+  opacity: 1.0 !important;
+}
+
+.mb-0,
+.my-0 {
+  margin-bottom: 0 !important;
+}
+
+.card-weather .weekly-weather .weekly-weather-item i {
+  font-size: 1.2rem;
+}
+
