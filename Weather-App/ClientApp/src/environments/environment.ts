@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseApiUrl: 'https://localhost:44338/weatherApi'
+  baseApiUrl: 'https://localhost:44304/weatherApi/'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as

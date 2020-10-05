@@ -32,16 +32,16 @@ export class WeatherForecastDashboardComponent implements OnInit {
       this.weatherForecastsSearchSubscribed.unsubscribe();
     }
     this.weatherForecastsSearchSubscribed = this.weatherSummaryService.getWeatherSummariesForLocation(this.searchLocationName)
-      .subscribe(res => {
-      if (res && res.length > 0){
-        const foundIndex = res.findIndex(w => {
+      .subscribe(weatherSummaries => {
+      if (weatherSummaries && weatherSummaries.length > 0) {
+        const foundIndex = weatherSummaries.findIndex(weatherSummary => {
           const today = new Date();
-          const applicableDate = new Date(w?.applicableDate);
+          const applicableDate = new Date(weatherSummary.applicableDate);
           return applicableDate.getDay() === today.getDay();
         });
-        if (foundIndex > -1){
-          this.firstWeatherForecastToDisplay = res[foundIndex];
-          this.weatherForecasts = res.filter(w => w.id !== this.firstWeatherForecastToDisplay.id);
+        if (foundIndex > -1) {
+          this.firstWeatherForecastToDisplay = weatherSummaries[foundIndex];
+          this.weatherForecasts = weatherSummaries.filter(w => w.id !== this.firstWeatherForecastToDisplay.id);
           this.weatherForecastsLoading = false;
         }
       }

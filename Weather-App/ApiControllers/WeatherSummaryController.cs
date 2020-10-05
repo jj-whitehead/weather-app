@@ -13,7 +13,7 @@ namespace Weather_App.ApiControllers
 {
     [ApiController]
     [Authorize]
-    [Route("api/[controller]/[action]")]
+    [Route("weatherApi/[controller]/[action]")]
     public class WeatherSummaryController : ControllerBase
     {
         [HttpPost]
